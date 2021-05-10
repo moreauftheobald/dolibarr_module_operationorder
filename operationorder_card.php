@@ -29,6 +29,8 @@ dol_include_once('operationorder/class/operationorderaction.class.php');
 dol_include_once('operationorder/lib/operationorder.lib.php');
 require_once DOL_DOCUMENT_ROOT . '/core/lib/date.lib.php';
 
+global $mysoc;
+
 if(empty($user->rights->operationorder->read)) accessforbidden();
 
 $langs->loadLangs(array('operationorder@operationorder', 'orders', 'companies', 'bills', 'products', 'other'));
@@ -293,6 +295,9 @@ if (empty($reshook))
                 $qty = GETPOST('qty'.$predef);
                 $price = GETPOST('price'.$predef);
                 $fk_warehouse = GETPOST('fk_warehouse');
+                //print 'mysoc= ';
+                //var_dump($conf);
+                //exit;
                 $pc = GETPOST('pc'.$predef);
                 $date_start = dol_mktime(GETPOST('date_start'.$predef.'hour'), GETPOST('date_start'.$predef.'min'), GETPOST('date_start'.$predef.'sec'), GETPOST('date_start'.$predef.'month'), GETPOST('date_start'.$predef.'day'), GETPOST('date_start'.$predef.'year'));
                 $date_end = dol_mktime(GETPOST('date_end'.$predef.'hour'), GETPOST('date_end'.$predef.'min'), GETPOST('date_end'.$predef.'sec'), GETPOST('date_end'.$predef.'month'), GETPOST('date_end'.$predef.'day'), GETPOST('date_end'.$predef.'year'));
