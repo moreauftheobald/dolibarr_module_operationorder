@@ -94,6 +94,7 @@ class OperationOrder extends SeedObject
 			'enabled' => 1,
 			'position' => 90,
 			'index' => 1,
+			'showoncombobox'=>'1'
 		),
 
         'fk_user_creat' => array('type'=>'integer:User:user/class/user.class.php', 'label'=>'UserAuthor', 'enabled'=>1, 'position'=>510, 'notnull'=>1, 'visible'=>-2, 'foreignkey'=>'user.rowid',),
