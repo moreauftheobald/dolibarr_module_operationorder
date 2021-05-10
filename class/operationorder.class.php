@@ -87,14 +87,14 @@ class OperationOrder extends SeedObject
         'note_private' => array('type'=>'html', 'label'=>'NotePrivate', 'enabled'=>1, 'position'=>62, 'notnull'=>0, 'visible'=>0),
 
 		'fk_c_operationorder_type' => array(
-			'type' => 'integer:OperationOrderDictType:operationorder/class/operationorder.class.php:1:entity IN (0, __ENTITY__)',
+			'type' => 'sellist:c_operationorder_type:label:rowid::entity IN (0, __ENTITY_',
+			//'type' => 'integer:OperationOrderDictType:operationorder/class/operationorder.class.php:1:entity IN (0, __ENTITY__)',
 			'label' => 'OperationOrderType',
 			'visible' => 1,
 			'foreignkey'=>'c_operationorder_type.rowid',
 			'enabled' => 1,
 			'position' => 90,
 			'index' => 1,
-			'showoncombobox'=>'1'
 		),
 
         'fk_user_creat' => array('type'=>'integer:User:user/class/user.class.php', 'label'=>'UserAuthor', 'enabled'=>1, 'position'=>510, 'notnull'=>1, 'visible'=>-2, 'foreignkey'=>'user.rowid',),
