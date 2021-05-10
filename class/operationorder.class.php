@@ -2661,7 +2661,7 @@ class OperationOrderDictType extends SeedObject
 
     public $fields = array(
         'code' => array('varchar(30)', 'length' => 30),
-        'label' => array('varchar(255)', 'length' => 255, 'showoncombobox' => 1),
+        'label' => array('varchar(255)', 'length' => 255, 'showoncombobox' => '1'),
         'blocked_status_code' => array('varchar(255)', 'length' => 255),
         'position' => array('integer'),
         'active' => array('integer'),
