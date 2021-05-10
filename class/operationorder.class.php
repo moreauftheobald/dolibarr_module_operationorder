@@ -87,7 +87,7 @@ class OperationOrder extends SeedObject
         'note_private' => array('type'=>'html', 'label'=>'NotePrivate', 'enabled'=>1, 'position'=>62, 'notnull'=>0, 'visible'=>0),
 
 		'fk_c_operationorder_type' => array(
-			'type' => 'sellist:OperationOrderDictType:operationorder/class/operationorder.class.php:1:entity IN (0, __ENTITY__)',
+			'type' => 'integer:OperationOrderDictType:operationorder/class/operationorder.class.php:1:entity IN (0, __ENTITY__)',
 			'label' => 'OperationOrderType',
 			'visible' => 1,
 			'foreignkey'=>'c_operationorder_type.rowid',
